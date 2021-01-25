@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/ras-calculator/static/css/main.0b87ef6b.chunk.css",
+    "main.js": "/ras-calculator/static/js/main.90b10f55.chunk.js",
+    "main.js.map": "/ras-calculator/static/js/main.90b10f55.chunk.js.map",
+    "runtime-main.js": "/ras-calculator/static/js/runtime-main.1aa0ca03.js",
+    "runtime-main.js.map": "/ras-calculator/static/js/runtime-main.1aa0ca03.js.map",
+    "static/css/2.55ffbaca.chunk.css": "/ras-calculator/static/css/2.55ffbaca.chunk.css",
+    "static/js/2.f9832479.chunk.js": "/ras-calculator/static/js/2.f9832479.chunk.js",
+    "static/js/2.f9832479.chunk.js.map": "/ras-calculator/static/js/2.f9832479.chunk.js.map",
+    "static/js/3.7abb6087.chunk.js": "/ras-calculator/static/js/3.7abb6087.chunk.js",
+    "static/js/3.7abb6087.chunk.js.map": "/ras-calculator/static/js/3.7abb6087.chunk.js.map",
+    "index.html": "/ras-calculator/index.html",
+    "service-worker.js": "/ras-calculator/service-worker.js",
+    "service-worker.js.map": "/ras-calculator/service-worker.js.map",
+    "static/css/2.55ffbaca.chunk.css.map": "/ras-calculator/static/css/2.55ffbaca.chunk.css.map",
+    "static/css/main.0b87ef6b.chunk.css.map": "/ras-calculator/static/css/main.0b87ef6b.chunk.css.map",
+    "static/js/2.f9832479.chunk.js.LICENSE.txt": "/ras-calculator/static/js/2.f9832479.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/ras-calculator/static/media/roboto-vietnamese-400-normal.52cebac0.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1aa0ca03.js",
+    "static/css/2.55ffbaca.chunk.css",
+    "static/js/2.f9832479.chunk.js",
+    "static/css/main.0b87ef6b.chunk.css",
+    "static/js/main.90b10f55.chunk.js"
+  ]
+}
