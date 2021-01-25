@@ -21,7 +21,7 @@ const routes = [
   { path: '/about', name: 'About', Component: About },
   { path: '/calculator', name: 'Calculator', Component: Calculator },
   { path: '/help', name: 'Help', Component: Help },
-  { path: '/result/:value', name: 'Result', Component: Result },
+  { path: '/result/:ras/:bmi', name: 'Result', Component: Result },
 ]
 
 export default function App() {

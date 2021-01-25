@@ -16,6 +16,9 @@ const theme = createMuiTheme({
     h4: {
       fontFamily: customFontForTitleAndBodyText,
     },
+    h5: {
+      fontFamily: customFontForTitleAndBodyText,
+    },
     subtitle1: {
       fontFamily: customFontForTitleAndBodyText,
     },

@@ -4,23 +4,31 @@ import AddToHomeScreenIcon from '@material-ui/icons/AddToHomeScreen';
 import Box from '@material-ui/core/Box';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
+import { Container } from '@material-ui/core';
 
 function About() {
     return (
         <>
-            <Typography gutterBottom>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Etiam in luctus diam, eu hendrerit leo. Praesent libero ligula,
-                commodo ut lacinia vitae, venenatis in ipsum. Aenean at nisi ullamcorper,
-                sagittis turpis ut, pulvinar ipsum. Praesent luctus ipsum fermentum, ornare sem in,
-                vestibulum mauris. Etiam congue congue mattis. Praesent id tellus et tortor suscipit
-                porttitor. Etiam massa nunc, bibendum et arcu et, vulputate tempor mi. Fusce
-                in augue sed mauris tempus commodo non pretium mauris. Nunc sagittis, felis id auctor placerat, tortor nisi bibendum mi, eu luctus tortor mauris eget sapien. Cras eu faucibus odio, in semper diam. Etiam non velit iaculis augue feugiat fringilla.
-                Maecenas vel leo eget est tempor rutrum eget nec est. Donec augue sem, tincidunt
-                in feugiat in, aliquam nec ex.
+            <Container maxWidth="sm">
+                <Typography
+                    variant="h5"
+                    align="center"
+                    gutterBottom>
+                    Calculate your menopausal status
              </Typography>
-
-            <Box display="flex" justifyContent="center" m={1} p={1} >
+                <Typography
+                    align="center"
+                    variant="body1"
+                    gutterBottom>
+                    This calculator is based on data from a Northern European caucasian
+                    population and gives merely an educated guess based on fuzzy set theory.
+             </Typography>
+            </Container>
+            <Box
+                display="flex"
+                justifyContent="center"
+                m={4}
+                p={4} >
                 <Button color="primary"
                     variant="contained"
                     size="large"
@@ -29,6 +37,8 @@ function About() {
                     Let's Begin
             </Button>
             </Box>
+
+
             <Box display="flex" justifyContent="center" m={1} p={1} >
                 <Button
                     startIcon={<AddToHomeScreenIcon />}

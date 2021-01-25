@@ -11,12 +11,38 @@ import {
 
 function Result() {
     const params: any = useParams();
-    const value = params.value;
+    const ras: number = parseFloat(params.ras);
+    const bmi: number = parseFloat(params.bmi);
+
+    let bmiText = '';
+    if (bmi < 18.5) bmiText = 'underweight';
+    if (bmi >= 18.5 && bmi <= 24.9) bmiText = 'normal';
+    if (bmi >= 25.0 && bmi <= 24.9) bmiText = 'overweight';
+    if (bmi >= 30) bmiText = 'obese';
+
+    if (!ras || !bmi) {
+        return <>Not found</>;
+    }
 
     return (
         <>
 
-<           Box display="flex" justifyContent="center" m={1} p={1} >
+             <Typography
+                align="center"
+                variant="h5"
+                gutterBottom>
+                Your RAS is {ras.toFixed(2)}
+             </Typography>
+            <Typography
+                align="center"
+                variant="body1"
+                gutterBottom>
+                Your BMI is {bmi.toFixed(2)} ({bmiText})
+             </Typography>
+
+
+
+            <Box display="flex" justifyContent="center" m={1} p={1} >
                 <Button
                     startIcon={<Print />}
                     variant="outlined"
