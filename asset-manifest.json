@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ras-calculator/static/css/main.2a8f7f93.chunk.css",
-    "main.js": "/ras-calculator/static/js/main.95552fb5.chunk.js",
-    "main.js.map": "/ras-calculator/static/js/main.95552fb5.chunk.js.map",
+    "main.js": "/ras-calculator/static/js/main.6d2a3ea2.chunk.js",
+    "main.js.map": "/ras-calculator/static/js/main.6d2a3ea2.chunk.js.map",
     "runtime-main.js": "/ras-calculator/static/js/runtime-main.136229f1.js",
     "runtime-main.js.map": "/ras-calculator/static/js/runtime-main.136229f1.js.map",
     "static/css/2.55ffbaca.chunk.css": "/ras-calculator/static/css/2.55ffbaca.chunk.css",
@@ -24,6 +24,6 @@
     "static/css/2.55ffbaca.chunk.css",
     "static/js/2.b3914a8c.chunk.js",
     "static/css/main.2a8f7f93.chunk.css",
-    "static/js/main.95552fb5.chunk.js"
+    "static/js/main.6d2a3ea2.chunk.js"
   ]
 }
