@@ -1,8 +1,9 @@
 import { red } from '@material-ui/core/colors';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme,responsiveFontSizes } from '@material-ui/core/styles';
 
 
 const theme = createMuiTheme({
+
   palette: {
     text: {
       primary: "#542d4e",
@@ -24,4 +25,4 @@ const theme = createMuiTheme({
   },
 });
 
-export default theme;
+export default responsiveFontSizes(theme);

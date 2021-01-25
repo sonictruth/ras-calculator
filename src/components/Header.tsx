@@ -15,7 +15,7 @@ export default function Header() {
             <Grid item xs={10}>
                 <Typography
                  align="left"
-                variant="h4"  
+                variant="h3"  
                 gutterBottom>
                     Reproductive Ageing Score
              </Typography> 

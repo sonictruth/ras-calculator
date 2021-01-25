@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import AddToHomeScreenIcon from '@material-ui/icons/AddToHomeScreen';
 import Box from '@material-ui/core/Box';
 import { Link } from 'react-router-dom';
-
+import Footer from './Footer';
 
 function About() {
     return (
@@ -23,6 +23,7 @@ function About() {
             <Box display="flex" justifyContent="center" m={1} p={1} >
                 <Button color="primary"
                     variant="contained"
+                    size="large"
                     component={Link}
                     to="/calculator">
                     Let's Begin
@@ -31,13 +32,14 @@ function About() {
             <Box display="flex" justifyContent="center" m={1} p={1} >
                 <Button
                     startIcon={<AddToHomeScreenIcon />}
-                    variant="contained"
+                    variant="outlined"
+                    size="small"
                     component={Link}
-                    to="/calculator">
-                    Add to homescreen
+                    to="/help">
+                    Add to Homescreen
             </Button>
             </Box>
-
+            <Footer />
         </>
     );
 }

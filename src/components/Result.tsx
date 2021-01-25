@@ -1,5 +1,6 @@
 import Typography from '@material-ui/core/Typography';
 import Autorenew from '@material-ui/icons/Autorenew';
+import Print from '@material-ui/icons/Print';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import { Link } from 'react-router-dom'
@@ -14,6 +15,15 @@ function Result() {
 
     return (
         <>
+
+<           Box display="flex" justifyContent="center" m={1} p={1} >
+                <Button
+                    startIcon={<Print />}
+                    variant="outlined"
+                    size="small">
+                    Print Results
+            </Button>
+            </Box>
 
             <Box display="flex"
                 justifyContent="center"
