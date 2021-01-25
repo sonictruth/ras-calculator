@@ -6,7 +6,8 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
-import 'fontsource-roboto';
+import '@fontsource/roboto';
+import "@fontsource/comfortaa" 
 import './index.css';
 import materialTheme from './materialTheme';
 

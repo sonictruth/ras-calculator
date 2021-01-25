@@ -43,6 +43,7 @@ export default function App() {
                 in={match != null}
                 timeout={300}
                 classNames="page"
+                appear
                 unmountOnExit
               >
 
