@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/ras-calculator/static/css/main.08f2bf15.chunk.css",
-    "main.js": "/ras-calculator/static/js/main.b3c57a57.chunk.js",
-    "main.js.map": "/ras-calculator/static/js/main.b3c57a57.chunk.js.map",
-    "runtime-main.js": "/ras-calculator/static/js/runtime-main.c0250ef7.js",
-    "runtime-main.js.map": "/ras-calculator/static/js/runtime-main.c0250ef7.js.map",
+    "main.css": "/ras-calculator/static/css/main.21ac79a4.chunk.css",
+    "main.js": "/ras-calculator/static/js/main.2397748f.chunk.js",
+    "main.js.map": "/ras-calculator/static/js/main.2397748f.chunk.js.map",
+    "runtime-main.js": "/ras-calculator/static/js/runtime-main.23927988.js",
+    "runtime-main.js.map": "/ras-calculator/static/js/runtime-main.23927988.js.map",
     "static/css/2.62a34ce6.chunk.css": "/ras-calculator/static/css/2.62a34ce6.chunk.css",
-    "static/js/2.bf88b9a3.chunk.js": "/ras-calculator/static/js/2.bf88b9a3.chunk.js",
-    "static/js/2.bf88b9a3.chunk.js.map": "/ras-calculator/static/js/2.bf88b9a3.chunk.js.map",
-    "static/js/3.08fb23d2.chunk.js": "/ras-calculator/static/js/3.08fb23d2.chunk.js",
-    "static/js/3.08fb23d2.chunk.js.map": "/ras-calculator/static/js/3.08fb23d2.chunk.js.map",
+    "static/js/2.48ee301a.chunk.js": "/ras-calculator/static/js/2.48ee301a.chunk.js",
+    "static/js/2.48ee301a.chunk.js.map": "/ras-calculator/static/js/2.48ee301a.chunk.js.map",
+    "static/js/3.8e1a95da.chunk.js": "/ras-calculator/static/js/3.8e1a95da.chunk.js",
+    "static/js/3.8e1a95da.chunk.js.map": "/ras-calculator/static/js/3.8e1a95da.chunk.js.map",
     "index.html": "/ras-calculator/index.html",
     "service-worker.js": "/ras-calculator/service-worker.js",
     "service-worker.js.map": "/ras-calculator/service-worker.js.map",
     "static/css/2.62a34ce6.chunk.css.map": "/ras-calculator/static/css/2.62a34ce6.chunk.css.map",
-    "static/css/main.08f2bf15.chunk.css.map": "/ras-calculator/static/css/main.08f2bf15.chunk.css.map",
-    "static/js/2.bf88b9a3.chunk.js.LICENSE.txt": "/ras-calculator/static/js/2.bf88b9a3.chunk.js.LICENSE.txt",
+    "static/css/main.21ac79a4.chunk.css.map": "/ras-calculator/static/css/main.21ac79a4.chunk.css.map",
+    "static/js/2.48ee301a.chunk.js.LICENSE.txt": "/ras-calculator/static/js/2.48ee301a.chunk.js.LICENSE.txt",
     "static/media/index.css": "/ras-calculator/static/media/roboto-vietnamese-400-normal.52cebac0.woff2",
     "static/media/logo.4aea2383.svg": "/ras-calculator/static/media/logo.4aea2383.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c0250ef7.js",
+    "static/js/runtime-main.23927988.js",
     "static/css/2.62a34ce6.chunk.css",
-    "static/js/2.bf88b9a3.chunk.js",
-    "static/css/main.08f2bf15.chunk.css",
-    "static/js/main.b3c57a57.chunk.js"
+    "static/js/2.48ee301a.chunk.js",
+    "static/css/main.21ac79a4.chunk.css",
+    "static/js/main.2397748f.chunk.js"
   ]
 }
