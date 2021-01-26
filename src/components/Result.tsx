@@ -1,18 +1,32 @@
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 import Autorenew from '@material-ui/icons/Autorenew';
 import Print from '@material-ui/icons/Print';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import GaugeChart from 'react-gauge-chart';
+import AreaChart from './AreaChart';
+
+import './Result.css';
 
 import {
     useParams,
 } from 'react-router-dom';
 
+const minAge = 35;
+const maxAge = 66;
+
+
 function Result() {
     const params: any = useParams();
     const ras: number = parseFloat(params.ras);
+    const rasPercent: number = ras * 100;
     const bmi: number = parseFloat(params.bmi);
+    const age: number = parseFloat(params.age);
+    const periods: number = parseFloat(params.periods);
+    const ovary: number = parseFloat(params.ovary);
+    const smoke: number = parseFloat(params.smoke);
 
     let bmiText = '';
     if (bmi < 18.5) bmiText = 'underweight';
@@ -21,48 +35,95 @@ function Result() {
     if (bmi >= 30) bmiText = 'obese';
 
     if (!ras || !bmi) {
-        return <>Not found</>;
+        return <></>;
     }
 
     return (
         <>
 
-             <Typography
-                align="center"
-                variant="h5"
-                gutterBottom>
-                Your RAS is {ras.toFixed(2)}
-             </Typography>
-            <Typography
-                align="center"
-                variant="body1"
-                gutterBottom>
-                Your BMI is {bmi.toFixed(2)} ({bmiText})
-             </Typography>
+
+            <Grid container
+                direction="row"
+                justify="center"
+                alignItems="center"
+
+                spacing={1}>
+                <Grid item xs={12} sm={4} className="print-hide">
+                    <GaugeChart 
+                        id='rasPercent-gauge'
+                        animDelay={1000}
+                        animate={true}
+                        textColor='#ce5eba'
+                        nrOfLevels={maxAge - minAge}
+                        arcsLength={[0.3, 0.5, 0.2]}
+                        colors={['#5BE12C', '#F5CD19', '#EA4228']}
+                        percent={ras}
+                        cornerRadius={10}
+                        arcPadding={0.02}
+                    />
+                </Grid>
+
+                <Grid item xs={12} sm={6}>
+                    <Box m={2} p={2} >
+                        <Typography
+                            align="center"
+                            variant="h5"
+                            gutterBottom>
+                            Your are {rasPercent.toFixed(2)}% menopausal
+                         </Typography>
+                        <Typography
+                            align="center"
+                            variant="body1"
+                            gutterBottom>
+                            Your BMI is {bmi.toFixed(2)} ({bmiText})
+                         </Typography>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} sm={10}>
+                    <AreaChart
+                        rasPercent={rasPercent}
+                        age={age}
+                        ovary={ovary}
+                        periods={periods}
+                        smoke={smoke}
+                        minAge={minAge}
+                        maxAge={maxAge} />
+                </Grid>
+
+
+            </Grid>
 
 
 
-            <Box display="flex" justifyContent="center" m={1} p={1} >
-                <Button
-                    startIcon={<Print />}
-                    variant="outlined"
-                    size="small">
-                    Print Results
+
+
+
+
+
+            <Box className="print-hide">
+                <Box display="flex" justifyContent="center" m={1} p={1} >
+                    <Button
+                        onClick={() => window.print()}
+                        startIcon={<Print />}
+                        variant="outlined"
+                        size="small">
+                        Print Results
             </Button>
-            </Box>
+                </Box>
 
-            <Box display="flex"
-                justifyContent="center"
-                m={1}
-                p={1} >
-                <Button
-                    startIcon={<Autorenew />}
-                    color="primary"
-                    variant="contained"
-                    component={Link}
-                    to="/calculator">
-                    Try Again
+                <Box display="flex"
+                    justifyContent="center"
+                    m={1}
+                    p={1} >
+                    <Button
+                        startIcon={<Autorenew />}
+                        color="primary"
+                        variant="contained"
+                        component={Link}
+                        to="/calculator">
+                        Try Again
                 </Button>
+                </Box>
             </Box>
 
         </>
