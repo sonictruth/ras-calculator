@@ -57,6 +57,7 @@ function Result() {
                         nrOfLevels={maxAge - minAge}
                         arcsLength={[0.3, 0.5, 0.2]}
                         colors={['#5BE12C', '#F5CD19', '#EA4228']}
+                        formatTextValue={(value) => `${parseFloat(value).toFixed(1)}%`}
                         percent={ras}
                         cornerRadius={10}
                         arcPadding={0.02}
@@ -69,13 +70,13 @@ function Result() {
                             align="center"
                             variant="h5"
                             gutterBottom>
-                            Your are {rasPercent.toFixed(2)}% menopausal
+                            Your are {rasPercent.toFixed(1)}% menopausal
                          </Typography>
                         <Typography
                             align="center"
                             variant="body1"
                             gutterBottom>
-                            Your BMI is {bmi.toFixed(2)} ({bmiText})
+                            Your BMI is {bmi.toFixed(1)} ({bmiText})
                          </Typography>
                     </Box>
                 </Grid>

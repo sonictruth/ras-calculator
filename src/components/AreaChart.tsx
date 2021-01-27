@@ -26,7 +26,7 @@ const defaultDatasetProp = {
 export default function AreaChart(props: any) {
     const minAge = parseInt(props.minAge);
     const maxAge = parseInt(props.maxAge);
-    const rasPercent = parseFloat(props.rasPercent);
+
     const age = parseInt(props.age);
     const periods = parseInt(props.periods);
     const ovary = parseInt(props.ovary);
@@ -45,7 +45,6 @@ export default function AreaChart(props: any) {
         calculateRas(age, periods, ovary, isSmoking ? 0 : 1) * 100);
 
 
-
     return <Line
         legend={{
             display: true,
@@ -59,7 +58,7 @@ export default function AreaChart(props: any) {
                         return `Age ${tooltipItem[0].label}`;
                     },
                     label: (tooltipItem: any, data: any) => {
-                        return `RAS: ${parseFloat(tooltipItem.value).toFixed(2)}`;
+                        return `RAS: ${parseFloat(tooltipItem.value).toFixed(1)}`;
                     }
                 },
                 enabled: true,
@@ -71,8 +70,7 @@ export default function AreaChart(props: any) {
             datasets: [
                 {
                     pointRadius: (context: any) => {
-                        const currentValue = context.dataset.data[context.dataIndex];
-                        if (currentValue.toFixed(2) === rasPercent.toFixed(2)) {
+                        if (parseInt(labels[context.dataIndex]) === age) {
                             return 10;
                         } else {
                             return 2;
@@ -85,7 +83,7 @@ export default function AreaChart(props: any) {
                 {
                     borderColor: '#BDB76B',
                     backgroundColor: '#F0E68C',
-                    label: isSmoking ? 'Widhout Smoking' : 'Smoking',
+                    label: isSmoking ? 'Without Smoking' : 'Smoking',
                     data: dataSetInvertSmoke
                 },
             ]

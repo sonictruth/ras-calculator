@@ -74,7 +74,7 @@ function Calculator() {
                 </Box>
 
                 <Box pb={4}>
-                    <Typography gutterBottom>How tall are you ? ({isImperial ? 'in' : 'cm'})</Typography>
+                    <Typography gutterBottom>How tall are you? ({isImperial ? 'in' : 'cm'})</Typography>
                     <Box pt={4}>
                         <Slider
                             value={height}
@@ -167,7 +167,7 @@ function Calculator() {
             </Box>
 
             <Box display="flex" justifyContent="center" m={1} p={1}>
-                <IconButton component={Link} to="/about" aria-label="delete">
+                <IconButton component={Link} to="/about">
                     <ArrowBackIcon />
                 </IconButton>
             </Box>

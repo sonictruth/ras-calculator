@@ -1,38 +1,32 @@
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import ArrowForward from '@material-ui/icons/ArrowForward';
-import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import { Link } from 'react-router-dom'
 
 function Calculator() {
     return (
         <>
-            <Box
-                m={1}
-                p={1} >
+            <Grid container
+                direction="row"
+                justify="center"
+                alignItems="center"
+
+                spacing={1}>
+                <Grid item xs={12} sm={7} >
              
-             <div >
-                    <p><strong >Follow the instructions below to add a shortcut on the home screen of your iPad, iPhone, or Android devices.</strong></p>
+             <Typography
+                    align="center"
+                    variant="body1"
+                    gutterBottom>
+                    This is a progressive web application, that means it can be installed on your phone or computer and it works offline.<br/>
+                    Ussualy this is done by going to your browser settings and choose 'Install' or 'Add to Home'.<br/><br/>
+                    Click <a  rel="noreferrer" target="_blank" href="https://support.google.com/chrome/answer/9658361?">here</a> to read more about it.<br/>
+             </Typography>
 
-                    <h2 ><span >iPad or iPhone</span></h2>
-                    <ol  >
-                        <li ><span >Launch “Safari” app. &nbsp;This does not work from the “Chrome” app.</span></li>
-                        <li ><span >Enter into the address field the URL of the website you want to create a shortcut to. Tap “Go.”</span></li>
-                        <li ><span >Tap the icon featuring a right-pointing arrow coming out of a box along the top of the Safari window to open a drop-down menu.</span></li>
-                        <li ><span >Tap “Add to Home Screen.” The Add to Home dialog box will appear, with the icon that will be used for this website on the left side of the dialog box.</span></li>
-                        <li ><span >Enter the name for the shortcut using the on-screen keyboard and tap “Add.” Safari will close automatically and you will be taken to where the icon is located on your iPad’s desktop.</span></li>
-                    </ol>
-                    <h2  ><span >Android</span></h2>
-                    <ol >
-                        <li ><span >Launch “Chrome” app.</span></li>
-                        <li ><span >Open the website or web page you want to pin to your home screen.</span></li>
-                        <li ><span >Tap the menu icon (3 dots in upper right-hand corner) and tap Install.</span></li>
-                    </ol>
-                </div>
-
-            </Box>
+            </Grid>
+            </Grid>
 
             <Box display="flex"
                 justifyContent="center"
@@ -40,8 +34,7 @@ function Calculator() {
                 p={1} >
                 <IconButton
                     component={Link}
-                    to="/about"
-                    aria-label="delete">
+                    to="/about">
                     <ArrowBackIcon />
                 </IconButton>
             </Box>

@@ -1,10 +1,11 @@
 import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
 import Button from '@material-ui/core/Button';
 import AddToHomeScreenIcon from '@material-ui/icons/AddToHomeScreen';
 import Box from '@material-ui/core/Box';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
-import { Container } from '@material-ui/core';
+
 
 function About() {
     return (
@@ -46,7 +47,7 @@ function About() {
                     size="small"
                     component={Link}
                     to="/help">
-                    Add to Homescreen
+                    Install
             </Button>
             </Box>
             <Footer />

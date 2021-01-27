@@ -11,7 +11,7 @@ export default function Footer() {
                 variant="body2"
                 color="textSecondary"
                 align="center">
-                Copyright &copy;   Kai, Alexandru Constantin 2020
+                Copyright &copy;   Dr. Kai Triebner, Alexandru Constantin 2020
         </Typography>
         </Box>
     );
