@@ -16,6 +16,7 @@ import Help from './components/Help';
 import './App.css';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
+import ScrollToTop from './components/ScrollToTop';
 
 const routes = [
   { path: '/about', name: 'About', Component: About },
@@ -31,7 +32,7 @@ export default function App() {
         <Header />
       </Box>
       <Router>
-
+        <ScrollToTop />
         <Route exact path="/">
           <Redirect to="/about" />
         </Route>
