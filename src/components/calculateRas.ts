@@ -18,5 +18,10 @@ export default function calculateRas(
 
     
     return ovary === 2 ? 1 : mu_periods + mu_age - (mu_periods * mu_age)
-
 }
+
+export const minPeriods = 0;
+export const maxPeriods = 15;
+export const minAge = 35;
+export const maxAge = 66;
+

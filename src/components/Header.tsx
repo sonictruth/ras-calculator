@@ -6,9 +6,7 @@ import './Header.css';
 
 export default function Header() {
 
-
     return (
-
         <>
             <Grid container
                 direction="row"

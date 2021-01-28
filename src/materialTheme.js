@@ -25,6 +25,9 @@ const theme = createMuiTheme({
     body1: {
       fontFamily: customFontForTitleAndBodyText,
     },
+    body2: {
+      fontFamily: customFontForTitleAndBodyText,
+    },
   },
   palette: {
     text: {

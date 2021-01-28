@@ -7,6 +7,7 @@ import Box from '@material-ui/core/Box';
 import { Link } from 'react-router-dom';
 import GaugeChart from 'react-gauge-chart';
 import AreaChart from './AreaChart';
+import Area3DChart from './Area3DChart';
 
 import './Result.css';
 
@@ -49,19 +50,20 @@ function Result() {
 
                 spacing={1}>
                 <Grid item xs={12} sm={4} className="print-hide">
-                    <GaugeChart 
+                    <GaugeChart
                         id='rasPercent-gauge'
                         animDelay={1000}
                         animate={true}
                         textColor='#ce5eba'
                         nrOfLevels={maxAge - minAge}
                         arcsLength={[0.3, 0.5, 0.2]}
-                        colors={['#5BE12C', '#F5CD19', '#EA4228']}
+                        colors={['#4bd15f', '#F5CD19', '#EA4228']}
                         formatTextValue={(value) => `${parseFloat(value).toFixed(1)}%`}
                         percent={ras}
                         cornerRadius={10}
                         arcPadding={0.02}
                     />
+
                 </Grid>
 
                 <Grid item xs={12} sm={6}>
@@ -90,14 +92,28 @@ function Result() {
                         minAge={minAge}
                         maxAge={maxAge} />
                 </Grid>
-
-
             </Grid>
 
 
+            <Box className="print-hide">
+                <Grid container
 
-
-
+                    direction="row"
+                    justify="center"
+                    alignItems="center">
+                    <Grid item xs={12} sm={7} >
+                        <Area3DChart />
+                    </Grid>
+                    <Grid item xs={12} >
+                        <Typography
+                            align="center"
+                            variant="body2"
+                            gutterBottom>
+                            Drag the image to move the 3D chart.
+                         </Typography>
+                    </Grid>
+                </Grid>
+            </Box>
 
 
 

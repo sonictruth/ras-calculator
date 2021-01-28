@@ -1,0 +1,11 @@
+.modebar {
+    top: 20px!important;
+    right: 30%!important;
+    border-radius: 5px!important;
+    background-color: #ce5eba!important;
+}
+
+.modebar-group {
+    background-color: transparent!important;
+    border-radius: 5px!important;
+}

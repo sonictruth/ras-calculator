@@ -11,6 +11,7 @@ function About() {
     return (
         <>
             <Container maxWidth="sm">
+
                 <Typography
                     variant="h5"
                     align="center"

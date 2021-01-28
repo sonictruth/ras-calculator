@@ -1,21 +1,27 @@
-import Slider from "@material-ui/core/Slider";
-import Radio from "@material-ui/core/Radio";
-import Typography from "@material-ui/core/Typography";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import IconButton from "@material-ui/core/IconButton";
-import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import Slider from '@material-ui/core/Slider';
+import Radio from '@material-ui/core/Radio';
+import Typography from '@material-ui/core/Typography';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import IconButton from '@material-ui/core/IconButton';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Switch from '@material-ui/core/Switch';
 
-import Button from "@material-ui/core/Button";
-import Box from "@material-ui/core/Box";
-import { Link, useHistory } from "react-router-dom";
-import React, { useState } from "react";
-import calculateRas from "./calculateRas";
-import calculateBmi from "./calculateBmi";
-import convert from "./unitConverter"
+import Button from '@material-ui/core/Button';
+import Box from '@material-ui/core/Box';
+import { Link, useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import calculateRas, {
+    minAge,
+    maxAge,
+    minPeriods,
+    maxPeriods,
+} from './calculateRas';
+
+import calculateBmi from './calculateBmi';
+import convert from './unitConverter';
 
 
 function Calculator() {
@@ -28,8 +34,7 @@ function Calculator() {
     const [smoke, setSmoke] = useState('0');
 
     const history = useHistory();
-    const minAge = 35;
-    const maxAge = 66;
+
     const minHeight = convert(150, 'cm', isImperial);
     const maxHeight = convert(185, 'cm', isImperial);
     const minWeight = convert(45, 'kg', isImperial);
@@ -38,8 +43,7 @@ function Calculator() {
     weight = convert(weight, 'kg', isImperial);
     const setHeightI = (value: number) => setHeight(convert(value as number, 'in', isImperial));
     const setWeightI = (value: number) => setWeight(convert(value as number, 'lb', isImperial));
-    const minPeriods = 0;
-    const maxPeriods = 15;
+
 
 
     function handleCalculate() {

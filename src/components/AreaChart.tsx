@@ -1,7 +1,6 @@
 import { Line } from 'react-chartjs-2';
 import calculateRas from './calculateRas';
-const range = (start: number, end: number) => Array.from({ length: (end - start + 1) }, (v, k) => k + start);
-
+import { range } from './utils';
 
 const defaultDatasetProp = {
     fill: true,
