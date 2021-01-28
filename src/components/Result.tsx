@@ -109,7 +109,7 @@ function Result() {
                             align="center"
                             variant="body2"
                             gutterBottom>
-                            Drag the image to move the 3D chart.
+                            Drag the chart to roate it.
                          </Typography>
                     </Grid>
                 </Grid>
