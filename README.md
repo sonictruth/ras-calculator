@@ -2,6 +2,6 @@
 
 <img src="public/apple-touch-icon.png" alt="logo" width="200"/>
 
-React, Meterial-UI, PWA
+React, Material-UI, PWA
 
 https://sonictruth.github.io/ras-calculator/
