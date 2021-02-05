@@ -16,28 +16,45 @@ function About() {
                     variant="h5"
                     align="center"
                     gutterBottom>
-                    Calculate your menopausal status
+                    Calculate your menopausal transition
              </Typography>
                 <Typography
                     align="center"
                     variant="body1"
                     gutterBottom>
-                    This calculator is based on data from a Northern European caucasian
-                    population and gives merely an educated guess based on fuzzy set theory.
-             </Typography>
+                    This app calculates the progress of female reproductive ageing, respectively what
+                    percentage of the menopausal transition has already happened. It is
+                    based on fuzzy set theory and derived from data of a European Caucasian
+                    population. <br /><br />The accuracy of the calculations is &gt; 85% and the original
+research paper can be found <a rel="noreferrer" target="_blank" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0235478">here</a>.
+                </Typography>
             </Container>
             <Box
                 display="flex"
                 justifyContent="center"
-                m={4}
-                p={4} >
+                m={2}
+                p={2} >
                 <Button color="primary"
                     variant="contained"
                     size="large"
                     component={Link}
                     to="/calculator">
                     Let's Begin
-            </Button>
+                 </Button>
+            </Box>
+
+            <Box
+                display="flex"
+                justifyContent="center"
+                m={2}
+                p={2} >
+                <Button color="secondary"
+                    variant="outlined"
+                    size="small"
+                    component={Link}
+                    to="/research">
+                    Reaserch Info
+                 </Button>
             </Box>
 
 

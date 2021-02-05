@@ -1,40 +1,37 @@
 import { Line } from 'react-chartjs-2';
+
 import { range } from './utils';
+
 import {
     defaultDatasetProp,
     mainDatasetStyles,
-    secondaryDatasetStyles,
 } from './areaChartStyles';
+
 import calculateRas, {
-    minAge,
-    maxAge,
+
+    minPeriods,
+    maxPeriods,
 } from './calculateRas';
 
-
-export default function AreaChart(props: any) {
-
+export default function AreaChartPeriods(props: any) {
 
     const userAge = parseInt(props.age);
     const userPeriods = parseInt(props.periods);
     const userOvary = parseInt(props.ovary);
-    const userIsSmoking = parseInt(props.smoke);
+    const useIsSmoking = parseInt(props.smoke);
 
-    const yearsRange = range(minAge, maxAge);
+    const periodsRange = range(minPeriods, maxPeriods);
 
-    const labels = yearsRange.map(age =>
-        age.toString());
+    const labels = periodsRange.map(numberOfPeriodsLastYear =>
+        numberOfPeriodsLastYear.toString());
 
-    const dataSet = yearsRange.map(age =>
-        calculateRas(age, userPeriods, userOvary, userIsSmoking) * 100);
-
-    const isSmoking = userIsSmoking === 1;
-    const dataSetInvertSmoke = yearsRange.map(age =>
-        calculateRas(age, userPeriods, userOvary, isSmoking ? 0 : 1) * 100);
+    const dataSet = periodsRange.map(numberOfPeriodsLastYear =>
+        calculateRas(userAge, numberOfPeriodsLastYear, userOvary, useIsSmoking) * 100);
 
 
     return <Line
         legend={{
-            display: true,
+            display: false,
             position: 'top'
         }}
         options={{
@@ -42,7 +39,7 @@ export default function AreaChart(props: any) {
                 titleFontSize: 15,
                 callbacks: {
                     title: (tooltipItem: any, data: any) => {
-                        return `Age: ${tooltipItem[0].label}`;
+                        return `Number of periods last 12 months: ${tooltipItem[0].label}`;
                     },
                     label: (tooltipItem: any, data: any) => {
                         return `RAS: ${parseFloat(tooltipItem.value).toFixed(1)}`;
@@ -57,7 +54,7 @@ export default function AreaChart(props: any) {
             datasets: [
                 {
                     pointRadius: (context: any) => {
-                        if (parseInt(labels[context.dataIndex]) === userAge) {
+                        if (parseInt(labels[context.dataIndex]) === userPeriods) {
                             return 10;
                         } else {
                             return 2;
@@ -67,13 +64,7 @@ export default function AreaChart(props: any) {
                     data: dataSet,
                     ...defaultDatasetProp,
                     ...mainDatasetStyles
-                },
-                {
-                    label: isSmoking ? 'Without Smoking' : 'Smoking',
-                    data: dataSetInvertSmoke,
-                    ...defaultDatasetProp,
-                    ...secondaryDatasetStyles
-                },
+                }
             ]
 
         }} />;

@@ -7,16 +7,20 @@ import Box from '@material-ui/core/Box';
 import { Link } from 'react-router-dom';
 import GaugeChart from 'react-gauge-chart';
 import AreaChart from './AreaChart';
-import Area3DChart from './Area3DChart';
+import AreaChartPeriods from './AreaChartPeriods';
 
 import './Result.css';
+
+import { resultTexts } from './resultTexts';
 
 import {
     useParams,
 } from 'react-router-dom';
 
-const minAge = 35;
-const maxAge = 66;
+import {
+    minAge,
+    maxAge,
+} from './calculateRas';
 
 
 function Result() {
@@ -39,6 +43,16 @@ function Result() {
         return <></>;
     }
 
+
+
+    const userResultText = resultTexts
+        .filter(textBlock => ras >= textBlock.min && ras <= textBlock.max)
+        .map((textBlock, index) => {
+            return <div key={index}>
+                {textBlock.text}
+            </div>;
+        });
+
     return (
         <>
 
@@ -49,24 +63,8 @@ function Result() {
                 alignItems="center"
 
                 spacing={1}>
-                <Grid item xs={12} sm={4} className="print-hide">
-                    <GaugeChart
-                        id='rasPercent-gauge'
-                        animDelay={1000}
-                        animate={true}
-                        textColor='#ce5eba'
-                        nrOfLevels={maxAge - minAge}
-                        arcsLength={[0.3, 0.5, 0.2]}
-                        colors={['#4bd15f', '#F5CD19', '#EA4228']}
-                        formatTextValue={(value) => `${parseFloat(value).toFixed(1)}%`}
-                        percent={ras}
-                        cornerRadius={10}
-                        arcPadding={0.02}
-                    />
 
-                </Grid>
-
-                <Grid item xs={12} sm={6}>
+                <Grid item md={12} lg={6}>
                     <Box m={2} p={2} >
                         <Typography
                             align="center"
@@ -74,46 +72,60 @@ function Result() {
                             gutterBottom>
                             Your are {rasPercent.toFixed(1)}% menopausal
                          </Typography>
-                        <Typography
-                            align="center"
-                            variant="body1"
-                            gutterBottom>
-                            Your BMI is {bmi.toFixed(1)} ({bmiText})
-                         </Typography>
+
                     </Box>
                 </Grid>
-                <Grid item xs={12} sm={10}>
-                    <AreaChart
-                        rasPercent={rasPercent}
-                        age={age}
-                        ovary={ovary}
-                        periods={periods}
-                        smoke={smoke}
-                        minAge={minAge}
-                        maxAge={maxAge} />
+
+                <Grid item xs={12} sm={4} className="print-hide">
+                    <GaugeChart
+                        id='rasPercent-gauge'
+                        animDelay={1000}
+                        animate={true}
+                        textColor='#ce5eba'
+                        nrOfLevels={maxAge - minAge}
+                        arcsLength={[0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1]}
+                        colors={['#ce5eba', '#803d74']}
+                        formatTextValue={(value) => `${parseFloat(value).toFixed(1)}%`}
+                        percent={ras}
+                        arcPadding={0.01}
+                        cornerRadius={3}
+                    />
                 </Grid>
+
+
+
+                <Grid item xs={12} >
+                    <Box m={2} p={2} >
+                        <Typography
+                            align="left"
+                            variant="body2">
+                            {userResultText}
+                        </Typography>
+                    </Box>
+                </Grid>
+
+                {ovary < 2 && <>
+                    <Grid item md={12} lg={10}>
+                        <AreaChart
+                            rasPercent={rasPercent}
+                            age={age}
+                            ovary={ovary}
+                            periods={periods}
+                            smoke={smoke} />
+                    </Grid>
+                    <Grid item md={12} lg={10}>
+                        <AreaChartPeriods
+                            rasPercent={rasPercent}
+                            age={age}
+                            ovary={ovary}
+                            periods={periods}
+                            smoke={smoke} />
+                    </Grid> </>
+                }
+
             </Grid>
 
 
-            <Box className="print-hide">
-                <Grid container
-
-                    direction="row"
-                    justify="center"
-                    alignItems="center">
-                    <Grid item xs={12} sm={7} >
-                        <Area3DChart />
-                    </Grid>
-                    <Grid item xs={12} >
-                        <Typography
-                            align="center"
-                            variant="body2"
-                            gutterBottom>
-                            Drag the chart to roate it.
-                         </Typography>
-                    </Grid>
-                </Grid>
-            </Box>
 
 
 

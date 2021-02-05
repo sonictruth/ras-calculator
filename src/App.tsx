@@ -12,6 +12,7 @@ import About from './components/About';
 import Result from './components/Result';
 import Calculator from './components/Calculator';
 import Help from './components/Help';
+import Research from './components/Research';
 
 import './App.css';
 import Box from '@material-ui/core/Box';
@@ -21,6 +22,7 @@ import ScrollToTop from './components/ScrollToTop';
 const routes = [
   { path: '/about', name: 'About', Component: About },
   { path: '/calculator', name: 'Calculator', Component: Calculator },
+  { path: '/research', name: 'Research', Component: Research },
   { path: '/help', name: 'Help', Component: Help },
   { path: '/result/:ras/:bmi/:age/:periods/:ovary/:smoke', name: 'Result', Component: Result },
 ]

@@ -35,3 +35,7 @@
   opacity: 1;
   transition: transform 1000ms, opacity 1000ms;
 }
+
+.calc-bmi {
+  display: none !important;
+}

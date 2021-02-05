@@ -54,7 +54,7 @@ function Calculator() {
     return (
         <>
 
-            <Box display="flex" justifyContent="center">
+            <Box className="calc-bmi" display="flex" justifyContent="center">
                 <FormControlLabel
                     control={<Switch
                         checked={isImperial}
@@ -77,7 +77,7 @@ function Calculator() {
                     </Box>
                 </Box>
 
-                <Box pb={4}>
+                <Box pb={4} className="calc-bmi">
                     <Typography gutterBottom>How tall are you? ({isImperial ? 'in' : 'cm'})</Typography>
                     <Box pt={4}>
                         <Slider
@@ -90,7 +90,7 @@ function Calculator() {
                     </Box>
                 </Box>
 
-                <Box pb={4}>
+                <Box pb={4} className="calc-bmi">
                     <Typography gutterBottom>How much do you weigh? ({isImperial ? 'lb' : 'kg'})</Typography>
                     <Box pt={4}>
                         <Slider
@@ -104,7 +104,7 @@ function Calculator() {
                 </Box>
                 <Box pb={4}>
                     <Typography gutterBottom>
-                        How many periods did you have in the last year?
+                        How many periods did you have in the last 12 months?
           </Typography>
                     <Box pt={4}>
                         <Slider
